@@ -1,7 +1,7 @@
 import { ContactItem } from './ContactItem';
 
-export const ContactsList = ({ contacts, theme }) => {
+export const ContactsList = ({ contacts }) => {
   return contacts.map((contact) => (
-    <ContactItem name={contact.name} key={contact.name} theme={theme} />
+    <ContactItem name={contact.name} key={contact.name} />
   ));
 };

@@ -1,8 +1,11 @@
-export const ContactItem = ({ name, theme }) => {
-  let currentLocation = null;
+import { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext.js';
+
+export const ContactItem = ({ name }) => {
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <div>
+    <div className={`theme-${theme}`}>
       {name}
     </div>
   );
